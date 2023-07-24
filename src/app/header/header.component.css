@@ -1,0 +1,10 @@
+.collapse{
+  justify-content:space-around;
+  align-items: center;
+
+}
+.navbar{
+  padding: 5px;
+  display: flex;
+
+}
