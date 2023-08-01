@@ -5,14 +5,26 @@ import {NotfoundComponent} from "./notfound/notfound.component";
 import {ContactComponent} from "./contact/contact.component";
 import {AboutComponent} from "./about/about.component";
 import {WebsiteComponent} from "./website/website.component";
+import { HeaderLayoutComponent } from './header-layout/header-layout.component';
+import { NoHeaderLayoutComponent } from './no-header-layout/no-header-layout.component';
 
 const routes: Routes = [
-  {path:'',component: HomeComponent},
-  {path:'contact',component:ContactComponent},
-  {path:'About',component:AboutComponent},
-  {path:'Website',component:WebsiteComponent},
-  {path:'Not-Found',component:NotfoundComponent},
-  {path:'**',redirectTo:'Not-Found'}
+  {
+    path: '',
+    component: HeaderLayoutComponent, // Use the layout with the header
+    children: [
+      { path: '', component: HomeComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'about', component: AboutComponent },
+      { path: 'website', component: WebsiteComponent }, // Add this line to match the WebsiteComponent
+    ],
+  },
+  {
+    path: 'not-found',
+    component: NoHeaderLayoutComponent, // Use the layout without the header
+    children: [{ path: '', component: NotfoundComponent }],
+  },
+  { path: '**', redirectTo: '/not-found' },
 ];
 
 @NgModule({

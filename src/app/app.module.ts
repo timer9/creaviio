@@ -11,6 +11,13 @@ import { AboutComponent } from './about/about.component';
 import { WebsiteComponent } from './website/website.component';
 import { SlidePage1Component } from './slide-page1/slide-page1.component';
 import {NgOptimizedImage} from "@angular/common";
+import { UnderHeaderPicComponent } from './under-header-pic/under-header-pic.component';
+import { TextXComponent } from './text-x/text-x.component';
+import { TowPicComponent } from './tow-pic/tow-pic.component';
+import { TextXxComponent } from './text-xx/text-xx.component';
+import { HeaderLayoutComponent } from './header-layout/header-layout.component';
+import { NoHeaderLayoutComponent } from './no-header-layout/no-header-layout.component';
+
 
 
 @NgModule({
@@ -24,6 +31,12 @@ import {NgOptimizedImage} from "@angular/common";
     AboutComponent,
     WebsiteComponent,
     SlidePage1Component,
+    UnderHeaderPicComponent,
+    TextXComponent,
+    TowPicComponent,
+    TextXxComponent,
+    HeaderLayoutComponent,
+    NoHeaderLayoutComponent,
 
 
 

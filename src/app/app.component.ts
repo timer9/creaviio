@@ -1,24 +1,34 @@
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   template: `
 
-   <app-header></app-header>
-
-
+    <ng-container *ngIf="showHeader">
+      <app-header></app-header>
+      <footer></footer>
+    </ng-container>
 
     <router-outlet></router-outlet>
-
-    <app-footer></app-footer>
-
 
 
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  showHeader: boolean = true;
   title = 'test2';
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.showHeader = !event.url.includes('/Not-Found') && this.isWildcardRoute(event.url);
+      }
+    });
+  }
 
+  isWildcardRoute(url: string): boolean {
+    const routeConfig = this.activatedRoute.routeConfig;
+    return routeConfig !== null && routeConfig.path === '**';
+  }
 }
