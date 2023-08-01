@@ -1,0 +1,33 @@
+/* CSS for Layout: Text on the right, Flex pic on the left */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.text-box {
+  flex: 1; /* Take the available width for the text box */
+  padding: 20px;
+}
+
+.text-box h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  font-size: 16px;
+
+}
+
+.image-box {
+  flex-basis: 50%; /* Take half of the available width for the flexible picture */
+  margin-bottom: 10px; /* Add a small gap of 10px under the flexible picture */
+  margin-left: 9px; /* Add spacing from the left side */
+  margin-top: 15px
+}
+
+.image-box img {
+  width: 100%; /* Ensure the flexible picture takes the full width of the image box */
+  height: auto; /* Maintain the image's aspect ratio */
+}

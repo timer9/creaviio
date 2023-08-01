@@ -1,0 +1,28 @@
+/* CSS for Layout 3 (Two pictures next to each other under the text box) */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-box {
+  text-align: center; /* Align text to the center */
+  margin-bottom: 20px; /* Add some spacing between text box and images */
+}
+
+.image-row {
+  display: flex; /* Use flex for the image row */
+  justify-content: center; /* Center the images horizontally */
+  flex-wrap: wrap; /* Allow images to wrap to the next line on smaller screens */
+}
+
+.image-box {
+  flex-basis: 50%;
+  max-width: 50%; /* Ensure images take half of the container width */
+  padding: 5px; /* Add some spacing between images */
+}
+
+.image-box img {
+  width: 100%; /* Ensure images take the full width of the image box */
+  height: auto; /* Maintain aspect ratio */
+}

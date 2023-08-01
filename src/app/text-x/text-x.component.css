@@ -1,0 +1,26 @@
+/* CSS for Layout 2 */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo {
+  margin-bottom: 20px; /* Add some spacing between photo and text box */
+}
+
+.center {
+  text-align: center;
+}
+.image{
+  display: flex; /* Use flexbox to arrange the elements */
+  align-items: center; /* Center elements horizontally */
+  justify-content: center; /* Center elements vertically */
+  width: 100%; /* Adjust the width as needed */
+  border: 1px solid #ccc; /* Optional: add a border for visual separation */
+  padding: 10px; /* Optional: add padding for better spacing */
+  max-width: 100%; /* Ensure the image fits inside the container */
+  height: auto; /* Maintain aspect ratio */
+  flex-direction: row;
+  flex-wrap: wrap;
+}
