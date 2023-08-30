@@ -3,31 +3,84 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+
 }
 
 .text-box {
   flex: 1; /* Take the available width for the text box */
   padding: 20px;
-}
+  margin-left: -264px;
+  margin-top: 100px;
 
-.text-box h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.text-box p {
-  font-size: 16px;
 
 }
-
+.text-container{
+  margin-left: 770px;
+  margin-top: -500px;
+  margin-bottom: 200px;
+  line-height: 2; /* Adjust the line-height value to reduce spacing between lines */
+  color: #8E8E8E;
+  font-size: 17px;
+}
 .image-box {
   flex-basis: 50%; /* Take half of the available width for the flexible picture */
-  margin-bottom: 10px; /* Add a small gap of 10px under the flexible picture */
-  margin-left: 9px; /* Add spacing from the left side */
-  margin-top: 15px
+  margin-bottom: 10px; /* Add a small gap of 100px under the flexible picture */
+  margin-left: 200px; /* Add spacing from the left side */
+  margin-top: 55px; /* Add spacing from the top */
+
 }
 
 .image-box img {
-  width: 100%; /* Ensure the flexible picture takes the full width of the image box */
+  width: 55%; /* Ensure the flexible picture takes the full width of the image box */
   height: auto; /* Maintain the image's aspect ratio */
 }
+/* For Mobile: */
+@media (max-width: 767px) {
+  .image-box {
+    flex-basis: 100%; /* Take the full width of the available space on mobile */
+    margin: 0; /* Remove all margins */
+
+  }
+  .image-box img {
+    width: 100vw; /* Make the image take the full viewport width */
+    height: 100vh; /* Make the image take the full viewport height */
+    object-fit: cover; /* Maintain the aspect ratio and cover the viewport */
+    margin-bottom: 600px;
+
+  }
+}
+.vertical-text {
+  /* Set the width and height of the vertical text container */
+  width: 40px; /* You can adjust the width according to your preference */
+  height: 200px; /* You can adjust the height according to your preference */
+  /* Rotate the text 90 degrees counterclockwise to make it vertical */
+  writing-mode: vertical-rl;
+  transform: rotate(-360deg);
+  /* Adjust positioning to move the text up and to the right */
+  position: relative;
+  top: -300px; /* Adjust this value to move the text up */
+  left: 700px; /* Adjust this value to move the text to the right */
+  font-weight: bold;
+ font-family: "Karla", Arial, sans-serif;
+}
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 767px) {
+  .vertical-text {
+    /* Reset positioning for smaller screens */
+    position: static;
+    margin-left: 190px;
+    font-size:18px;
+    transform: rotate(-90deg);
+    margin-top: -1400px;
+    margin-bottom: 650px;
+
+  }
+  .text-container{
+
+
+  }
+  .text-box{
+    margin-top: 60px;
+  }
+}
+

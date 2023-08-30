@@ -1,12 +1,65 @@
-<!-- Layout: Text on the left, Flex pic on the right -->
+
 <div class="flex-container">
   <div class="text-box">
-    <!-- Your text content here -->
-    <h2>Heading</h2>
-    <p>Text content goes here.</p>
+    <h2>Here Are Some of My Skills</h2>
+
   </div>
-  <div class="image-box">
-    <!-- Place your image here -->
-    <img src="assets/me1.jpg" alt="Photo">
+  <div class="skill" >
+  <pre class="skill-font">
+    <h6 class="number1" style="color: black">1 - FRONT END DEVELOPMENT</h6>                   <h6 class="number3" style="color: black">3 - WEB MARKETING</h6>
+
+
+                         . Angular                                                                     . Sales Marketing
+
+                         . HTML5                                                                       . Invoice
+
+                         . Git                                                                             .eCommerce
+
+                         . SQL Server                                                                            *S*
+
+                         . CSS                                                                             *K*
+
+                         . Bootstrap                                                                      *I*
+
+                         . WordPress                                                                             *l l*
+
+
+     <h6 class="number2" style="color: black">2 - Crypto</h6>     <h6 class="number4" style="color: black">4 - GRAPHIC DESIGN</h6>
+
+                         . Expertise in                                                             . Website & Digital Design
+                           crypto markets
+
+                         . Miner installer                                                          . Logo Designer
+
+                         . Problem-solving
+
+                         . Dex trader
+
+                         ...
+
+
+
+  </pre>
   </div>
+</div>
+<div class="image-box">
+  <!-- Place your image here -->
+  <img ngSrc="assets/skills.gif" alt="Photo" height="500" width="500">
+</div>
+<div class="vertical-text">
+  {{ textBoxValue }}
+</div>
+<pre class="skill-text">New Skills Loading ...</pre>
+
+
+<div class="skill-phone" *ngIf="isMobile"><!--us this code for un showe cod in Desktop pc -->
+  <p>
+     Angular
+    . HTML5
+    . Git
+    . SQL Server
+    . CSS
+    . Bootstrap
+    . WordPress
+  </p>
 </div>

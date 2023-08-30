@@ -15,13 +15,13 @@ import { Component } from '@angular/core';
               <a class="nav-link" [routerLink]="'/'">Home <span class="sr-only"></span></a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" [routerLink]="'/Website'">Website <span class="sr-only"></span></a>
+              <a class="nav-link" [routerLink]="'/webs'">Website <span class="sr-only"></span></a>
             </li>
             <li class="nav-item ">
               <a class="nav-link" [routerLink]="'/contact'">Contact <span class="sr-only"></span></a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" [routerLink]="'/About'">About <span class="sr-only"></span></a>
+              <a class="nav-link" [routerLink]="'/about'">About <span class="sr-only"></span></a>
             </li>
           </ul>
         </div>

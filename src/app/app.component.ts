@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
   template: `
 
     <ng-container *ngIf="showHeader">
-      <app-header></app-header>
-      <footer></footer>
     </ng-container>
 
     <router-outlet></router-outlet>
@@ -18,7 +16,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   showHeader: boolean = true;
-  title = 'test2';
+  title: any;
+
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {

@@ -1,35 +1,119 @@
-/* CSS for Layout: Text on the left, Flex pic on the right */
-.flex-container {
+.vertical-text {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  /* Set the width and height of the vertical text container */
+  width: 40px; /* You can adjust the width according to your preference */
+  height: 200px; /* You can adjust the height according to your preference */
+  /* Rotate the text 90 degrees counterclockwise to make it vertical */
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+margin-left: 50px;
+margin-bottom: 300px;
+  margin-top: -400px;
+}
+.image-box{
+  display: flex;
+  justify-content: flex-end;
+  max-width: 100%; /* Adjust this value to your desired maximum width */
+  max-height: 100%; /* Adjust this value to your desired maximum height */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: -800px;
+margin-right: 150px;
+  margin-bottom: 200px;
+;
+}
+.flex-container{
+  display: flex;
+  margin-left: 200px;
+  margin-top: -50px;
+}
+.skill{
+  display: flex;
+  margin-top: 200px;
+  margin-left: -500px;
+}
+.number1{
+  display: flex;
+  margin-left: 60px;
+}
+.number2{
+  display: flex;
+  margin-left: 60px;
+}
+.number3{
+  display: flex;
+  margin-left: 400px;
+  margin-top: -48px;
+}
+.number4{
+  display: flex;
+  margin-left: 400px;
+  margin-top: -48px;
+}
+.skill-font{
+  font-family: "Karla", Arial, sans-serif;
+  color: #8E8E8E;
+}
+.text-box{
+  display: flex;
+  margin-top: 50px;
 
 }
+.skill-text{
 
-.text-box {
-  flex: 1; /* Take the available width for the text box */
-  padding: 9px;
+margin-top: -900px;
+  margin-bottom: 900px;
+  margin-left: 210px;
+}
+@media (max-width: 767px) {
+  .text-box{
+    margin-left: -150px;
+    margin-top: -50px;
+  }
+  .skill{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 800px;
+
+  }
+  .image-box img {
+    flex-direction: column;
+    max-width: 100%;
+    height: 100%;
+    margin-top: 850px;
+    margin-right: -85px;
+  }
+.skill-text{
+
+  margin-left: 60px;
+}
+.number1{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 200px;
+
+}
+}
+@media (max-width: 768px) {
+  .skill {
+    display: none; /* Hide the skill section on mobile screens */
+  }
+  .skill-text{
+    display: none;
+  }
+  .vertical-text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: -420px;
+  }
+  .skill-phone {
+    text-align: center; /* Center the content on mobile screens */
+    margin: 20px 0; /* Add margin for spacing */
+  }
+.skill-phone{
+  margin-top: -200px;
+}
 }
 
-.text-box h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.text-box p {
-  font-size: 16px;
-}
-
-.image-box {
-  flex: 1; /* Take the available width for the image box */
-  max-width: 50%; /* Limit the image box to half of the container width */
-  margin-right: 5px; /* Add spacing from the right side */
-  margin-top: 9px
-
-}
-
-.image-box img {
-  width: 100%; /* Ensure the image takes the full width of the image box */
-  height: auto; /* Maintain the image's aspect ratio */
-
-}

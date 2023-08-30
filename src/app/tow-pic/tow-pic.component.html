@@ -2,17 +2,23 @@
 <div class="flex-container">
   <div class="text-box">
     <!-- Your text content here -->
-    <h2>Start now</h2>
+    <a [href]="currentLink" target="_blank" class="start-button" id="startButton" (click)="increaseFontSize()">Start Now</a>
+    <br>
+    <br>
+    <div class="text-box2 center">
+      <p>You can follow the tutorials on the YouTube channel for free and send us any questions you have about Angular on Telegram or Instagram. You can go to the end of the page to access</p>
+    </div>
     <p>Learning html, css and javascript languages in Angular</p>
   </div>
-  <div class="image-row">
+  <div   class="image-container" >
     <div class="image-box">
       <!-- Place your first image here -->
-      <img ngSrc="assets/split1.jpg" alt="Photo" height="1280" width="960">
+
+      <img ngSrc="assets/2pic-1.gif" alt="Photo" height="500" width="500">
     </div>
     <div class="image-box">
       <!-- Place your second image here -->
-      <img ngSrc="assets/split2.jpg" alt="Photo" height="1280" width="960">
+      <img ngSrc="assets/2pic-2.gif" alt="Photo" height="500" width="500">
     </div>
   </div>
 </div>

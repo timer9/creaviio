@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./text-x.component.css']
 })
 export class TextXComponent {
-
+  textBoxValue: string = 'Build Your Own webiste --'; // You can change the text here
+  hextBoxValue: string = '--  Easy----Fast----Powerfull'; // You can change the text here
 }
