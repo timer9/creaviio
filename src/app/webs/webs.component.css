@@ -1,0 +1,68 @@
+.gallery{
+  display: flex;
+  background-color:transparent;
+  gap: 16px;
+  scale: 1.6;
+  justify-content: center;
+  margin-top: 200px;
+  margin-bottom: 200px;
+
+}
+.card{
+  position:relative;
+  left: 0 ;
+  width: 140px;
+  height: 160px;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: 1000ms all;
+  transform-origin:center left;
+  box-shadow: 0 5px 12px rgba(0,0,0, 0.5);
+  outline: 1px solid transparent;
+  overflow: hidden;
+
+}
+.card img {
+  height: 160px; /* You can adjust this height as needed */
+  width: 100%; /* Ensure the image takes the full width of the card */
+  object-fit: cover;
+  border-radius: 4px;
+}
+.card:hover figcaption {
+  font-size:0.6rem;
+  position: absolute;
+  height: 80px;
+  width: 160px;
+  display: flex;
+  align-items:end;
+  background: linear-gradient(to top,
+  rgba(0, 0, 0, 0.9) 0%,
+  rgba(0, 0, 0, 0)100%
+  );
+  color:white;
+  left: 0;
+  bottom: 0;
+  padding-left: 12px;
+  padding-bottom: 10px;
+}
+.card:hover ~ .card{
+  font-weight: bold;
+  cursor: pointer;
+  transform: translateX(22px);
+
+}
+@media (max-width: 768px) {
+  .gallery{
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    width: 185px;
+    height: 600px;
+
+  }
+  .card:hover ~ .card{
+    font-weight: bold;
+    cursor: pointer;
+    transform:translateY(40px);
+  }
+}

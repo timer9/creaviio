@@ -1,0 +1,46 @@
+/* about.component.css */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Karla", Arial, sans-serif;
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.about-text p {
+  font-size: 16px;
+}
+
+.image-box {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Ensure the image doesn't exceed its container width */
+.image-box img {
+  max-width: 100%;
+  height: auto;
+}
+.card-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use the default link color */
+}
+.card-link:hover{
+  font-weight: bold;
+  cursor: pointer;
+  transform:translateY(40px);
+}

@@ -69,7 +69,7 @@ import { faFacebookF, faTwitter, faGoogle, faInstagram, faLinkedinIn, faGithub }
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(248, 249, 250, 0.2);">
           <div class="copyright-text" style="font-size: 12px">
-            © Copyright ©2023 All rights reserved | This template is made with (love) by Amir Hossein Teshehdel
+             Copyright © 2023 All rights reserved | This template is made with (Love) by Amir Hossein Teshehdel
           </div>
           <a class="text-white" href="https://www.instagram.com/amir.teshnehdel/?hl=bg"></a>
         </div>
